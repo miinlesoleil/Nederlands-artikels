@@ -12,18 +12,54 @@ def load_articles():
             return json.load(f)
     return []
 
-st.set_page_config(page_title="📚 Artikel Suggestie", layout="centered")
+# Page config
+st.set_page_config(
+    page_title="📚 Artikel Suggestie",
+    layout="centered",
+    initial_sidebar_state="collapsed"
+)
 
-st.title("📖 Willekeurige Artikel Suggestie")
+# Custom style
+st.markdown("""
+    <style>
+    body {
+        background-color: #1f1f1f;
+        color: #e0d6c9;
+    }
+    .stApp {
+        font-family: 'Georgia', serif;
+        background-color: #1f1f1f;
+    }
+    h1, h2, h3 {
+        color: #e6dfd2;
+    }
+    .stButton>button {
+        color: #1f1f1f;
+        background-color: #e0d6c9;
+        border: none;
+        padding: 0.6em 1.2em;
+        font-size: 1em;
+        border-radius: 8px;
+    }
+    .stButton>button:hover {
+        background-color: #d5c9bb;
+        color: black;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+st.markdown("# ✨ *Willekeurige Artikel Suggestie*")
+st.markdown("### _Voor als je niet kunt kiezen wat te lezen..._")
+st.markdown("🕯️ *Dark academia edition*")
 
 articles = load_articles()
 
 if not articles:
     st.warning("Geen artikels gevonden. Voeg eerst artikels toe aan de JSON.")
 else:
-    if st.button("🎲 Toon een willekeurig artikel"):
+    if st.button("📜 Toon een artikel"):
         article = random.choice(articles)
-        st.subheader(article['title'])
-        st.markdown(f"[🌐 Lees artikel]({article['url']})")
+        st.markdown("### 📖 " + article['title'])
+        st.markdown(f"🔗 [Lees dit artikel]({article['url']})")
 
-    st.markdown(f"📄 Totaal artikels: **{len(articles)}**")
+    st.markdown(f"🗂️ In totaal zijn er **{len(articles)}** artikels.")
