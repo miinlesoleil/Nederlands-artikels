@@ -23,12 +23,12 @@ st.set_page_config(
 st.markdown("""
     <style>
     body {
-        background-color: #1f1f1f;
-        color: #e0d6c9;
+        background-color: #f8f1e4;
+        color: #1f1f1f;
     }
     .stApp {
         font-family: 'Georgia', serif;
-        background-color: #1f1f1f;
+        background-color: #f8f1e4;
     }
     h1, h2, h3 {
         color: #e6dfd2;
