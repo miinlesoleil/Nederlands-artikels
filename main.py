@@ -49,9 +49,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("# ✨ *Willekeurige Artikel Suggestie*")
-st.markdown("### _Voor als je niet kunt kiezen wat te lezen..._")
-st.markdown("🕯️ *Dark academia edition*")
-
+st.markdown("### _Hier zijn wij fan van EOS Wetenschap Artikels!_")
+st.markdown("🕯️ *Veel succes met je ITNA examen*💘")
 articles = load_articles()
 
 if not articles:
