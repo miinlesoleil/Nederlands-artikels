@@ -22,28 +22,30 @@ st.set_page_config(
 # Custom style
 st.markdown("""
     <style>
-    body {
-        background-color: #f8f1e4;
-        color: #1f1f1f;
+    html, body, [class*="css"]  {
+        font-family: 'Times New Roman', Times, serif !important;
     }
+
     .stApp {
-        font-family: 'Times New Roman', Times, serif;
         background-color: #f8f1e4;
     }
+
     h1, h2, h3 {
-        color: #e6dfd2;
+        color: #2b2b2b;
     }
+
     .stButton>button {
-        color: #1f1f1f;
-        background-color: #e0d6c9;
+        color: #f8f1e4;
+        background-color: #5a4d41;
         border: none;
         padding: 0.6em 1.2em;
         font-size: 1em;
         border-radius: 8px;
     }
+
     .stButton>button:hover {
-        background-color: #d5c9bb;
-        color: black;
+        background-color: #776556;
+        color: #ffffff;
     }
     </style>
 """, unsafe_allow_html=True)
